@@ -1,7 +1,5 @@
 "use client";
-import { Icon, Box, Flex, Text, Button } from "@chakra-ui/react";
-import { HiOutlineArrowRight } from "react-icons/hi";
-import { IProjects } from "@/interfaces/projects";
+import { Icon, Flex, Text, Button } from "@chakra-ui/react";
 import { FaChevronRight } from "react-icons/fa";
 
 export default function ArticleButton() {

@@ -1,17 +1,15 @@
 "use client";
 import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
-import { keyframes } from "@emotion/react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ArticleDate() {
-  const { getButtonProps, getDisclosureProps, isOpen, onOpen } =
-    useDisclosure();
+  const { isOpen, onOpen } = useDisclosure();
   const [hidden, setHidden] = useState(!isOpen);
 
   useEffect(() => {
     onOpen();
-  }, []);
+  });
   return (
     <AnimatePresence>
       <motion.div

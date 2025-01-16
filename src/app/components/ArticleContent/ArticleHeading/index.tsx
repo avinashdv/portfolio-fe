@@ -13,7 +13,9 @@ export default function ArticleHeading() {
     for (let i = start; i < end; i++) {
       setTimeout(() => {
         if (htmlElement as HTMLElement) {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
+
           htmlElement.children[val]!.innerText = articleTitleArr[i];
         }
       }, i * 25);
@@ -21,10 +23,9 @@ export default function ArticleHeading() {
   };
 
   const modifyTitle = () => {
-    let titleData = document.getElementById("titleData") as HTMLElement;
+    const titleData = document.getElementById("titleData") as HTMLElement;
     let cnt = 0;
     if (titleData) {
-      console.log("titleData");
       for (let i = 0; i < titleData.children.length; i++) {
         getLetter(cnt, (cnt += 4), titleData, i);
       }
@@ -33,7 +34,7 @@ export default function ArticleHeading() {
 
   useEffect(() => {
     modifyTitle();
-  }, []);
+  });
 
   return (
     <Flex justifyContent={"space-between"} pb="12" alignItems={"center"}>

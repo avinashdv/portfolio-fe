@@ -1,7 +1,6 @@
 "use client";
-import { Box, Flex, Text } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import { keyframes } from "@emotion/react";
+import { Text } from "@chakra-ui/react";
+import { useEffect } from "react";
 import { userNameArr } from "@/constants/content";
 
 export default function UserNameAnimation() {
@@ -14,7 +13,9 @@ export default function UserNameAnimation() {
     for (let i = start; i < end; i++) {
       setTimeout(() => {
         if (htmlElement as HTMLElement) {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
+
           htmlElement.children[val]!.innerText = userNameArr[i];
         }
       }, i * 25);
@@ -22,10 +23,9 @@ export default function UserNameAnimation() {
   };
 
   const modifyTitle = () => {
-    let userNameData = document.getElementById("userNameData") as HTMLElement;
+    const userNameData = document.getElementById("userNameData") as HTMLElement;
     let cnt = 0;
     if (userNameData) {
-      console.log("userNameData");
       for (let i = 0; i < userNameData.children.length; i++) {
         getLetter(cnt, (cnt += 4), userNameData, i);
       }
@@ -34,7 +34,7 @@ export default function UserNameAnimation() {
 
   useEffect(() => {
     modifyTitle();
-  }, []);
+  });
 
   return (
     <Text

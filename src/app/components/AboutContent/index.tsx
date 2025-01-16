@@ -3,7 +3,6 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import AnimationContent from "./AnimationContent";
 import UserNameAnimation from "./UserNameAnimation";
-import { useEffect } from "react";
 import DeveloperContent from "./DeveloperContent";
 
 const fadeOut = keyframes`  

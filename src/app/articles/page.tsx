@@ -2,7 +2,6 @@
 
 import { Box } from "@chakra-ui/react";
 import Sidebar from "../components/Sidebar";
-import { webProjectsContent } from "@/constants/content";
 import ArticleContent from "../components/ArticleContent";
 import ArticleSkeleton from "../components/ArticleSkeleton";
 

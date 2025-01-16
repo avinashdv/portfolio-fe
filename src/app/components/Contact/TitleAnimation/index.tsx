@@ -13,6 +13,7 @@ export function TitleAnimation() {
     for (let i = start; i < end; i++) {
       setTimeout(() => {
         if (htmlElement as HTMLElement) {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           htmlElement.children[val]!.innerText = contactTitleArr[i];
         }
@@ -21,7 +22,7 @@ export function TitleAnimation() {
   };
 
   const modifyTitle = () => {
-    let titleData = document.getElementById("titleData") as HTMLElement;
+    const titleData = document.getElementById("titleData") as HTMLElement;
     let cnt = 0;
     if (titleData) {
       for (let i = 0; i < titleData.children.length; i++) {
@@ -32,7 +33,7 @@ export function TitleAnimation() {
 
   useEffect(() => {
     modifyTitle();
-  }, []);
+  });
 
   return (
     <Text fontSize={"4xl"} fontWeight={"semibold"} color="white" id="titleData">

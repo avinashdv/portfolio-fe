@@ -1,7 +1,6 @@
 "use client";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { keyframes } from "@emotion/react";
 
 export default function AnimationContent() {
   const [developerAbout, setDeveloperAbout] = useState<string>("Full-Stack");
@@ -27,14 +26,18 @@ export default function AnimationContent() {
   };
 
   function removeDeveloperAboutAfterStyle() {
-    var styleElem = document.head.appendChild(document.createElement("style"));
+    const styleElem = document.head.appendChild(
+      document.createElement("style")
+    );
 
     styleElem.innerHTML =
       "#developerAbout:after { transform: scaleX(1);transform-origin:left;}";
   }
 
   function addDeveloperAboutAfterStyle() {
-    var styleElem = document.head.appendChild(document.createElement("style"));
+    const styleElem = document.head.appendChild(
+      document.createElement("style")
+    );
     styleElem.innerHTML =
       "#developerAbout:after { transform: scaleX(0);transform-origin: right;}";
     setTimeout(() => {
@@ -43,7 +46,9 @@ export default function AnimationContent() {
   }
 
   function removeText() {
-    var styleElem = document.head.appendChild(document.createElement("style"));
+    const styleElem = document.head.appendChild(
+      document.createElement("style")
+    );
     styleElem.innerHTML =
       "#developerAbout {color:rgba(255,255,255,0);  transition: color 1s ease}";
 
@@ -53,7 +58,9 @@ export default function AnimationContent() {
   }
 
   function addText() {
-    var styleElem = document.head.appendChild(document.createElement("style"));
+    const styleElem = document.head.appendChild(
+      document.createElement("style")
+    );
     styleElem.innerHTML =
       "#developerAbout {  color: rgba(255,255,255,1);  transition:color 1s linear;}";
 

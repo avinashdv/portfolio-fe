@@ -1,7 +1,4 @@
 import { extendTheme } from "@chakra-ui/react";
-import type { StyleFunctionProps } from "@chakra-ui/styled-system";
-import { mode } from "@chakra-ui/theme-tools";
-import Fonts from "@/utils/fonts";
 
 const theme = extendTheme({
   fonts: {
@@ -17,7 +14,7 @@ const theme = extendTheme({
     useSystemColorMode: false,
   },
   styles: {
-    global: (props: StyleFunctionProps) => ({
+    global: () => ({
       body: {
         bg: "",
       },

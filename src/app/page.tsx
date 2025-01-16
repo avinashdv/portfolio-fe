@@ -10,7 +10,6 @@ import Projects from "./components/Projects";
 import { Contact } from "./components/Contact";
 
 export default function Home() {
-  console.log("webProjectsContent", webProjectsContent);
   return (
     <Box w="full" position={"relative"}>
       <Sidebar />

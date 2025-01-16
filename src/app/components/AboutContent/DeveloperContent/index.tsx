@@ -4,12 +4,16 @@ import { useEffect } from "react";
 
 export default function DeveloperContent() {
   const showText = () => {
-    var styleElem = document.head.appendChild(document.createElement("style"));
+    const styleElem = document.head.appendChild(
+      document.createElement("style")
+    );
     styleElem.innerHTML = "#developerTitle { color:rgb(255,255,255,1) }";
   };
 
   const removeTransition = () => {
-    var styleElem = document.head.appendChild(document.createElement("style"));
+    const styleElem = document.head.appendChild(
+      document.createElement("style")
+    );
     styleElem.innerHTML =
       "#developerTitle:after { transform: scaleX(0);transform-origin: right; }";
 
@@ -19,7 +23,9 @@ export default function DeveloperContent() {
   };
 
   const addTransition = () => {
-    var styleElem = document.head.appendChild(document.createElement("style"));
+    const styleElem = document.head.appendChild(
+      document.createElement("style")
+    );
     styleElem.innerHTML =
       "#developerTitle:after { transform: scaleX(1);transform-origin: left;}";
     setTimeout(() => {
@@ -29,7 +35,7 @@ export default function DeveloperContent() {
 
   useEffect(() => {
     addTransition();
-  }, []);
+  });
 
   return (
     <Box

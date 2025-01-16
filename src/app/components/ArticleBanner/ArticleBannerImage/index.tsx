@@ -5,12 +5,16 @@ import { useEffect } from "react";
 
 export default function ArticleBannerImage() {
   const showImage = () => {
-    var styleElem = document.head.appendChild(document.createElement("style"));
+    const styleElem = document.head.appendChild(
+      document.createElement("style")
+    );
     styleElem.innerHTML = "#articleBannerImage > div { opacity: 1 }";
   };
 
   const removeTransition = () => {
-    var styleElem = document.head.appendChild(document.createElement("style"));
+    const styleElem = document.head.appendChild(
+      document.createElement("style")
+    );
     styleElem.innerHTML =
       "#articleBannerImage:after { transform: scaleX(0);transform-origin: right; }";
 
@@ -20,7 +24,9 @@ export default function ArticleBannerImage() {
   };
 
   const addTransition = () => {
-    var styleElem = document.head.appendChild(document.createElement("style"));
+    const styleElem = document.head.appendChild(
+      document.createElement("style")
+    );
     styleElem.innerHTML =
       "#articleBannerImage:after { transform: scaleX(1);transform-origin: left;}";
     setTimeout(() => {
@@ -30,7 +36,7 @@ export default function ArticleBannerImage() {
 
   useEffect(() => {
     addTransition();
-  }, []);
+  });
 
   return (
     <Box

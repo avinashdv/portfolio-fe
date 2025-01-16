@@ -59,7 +59,7 @@ const WebsiteProjects: React.FC<IProjects> = ({
 
   useEffect(() => {
     onToggle();
-  }, []);
+  });
 
   const fadeInTopLineAnimation = `
   ${fadeInTopLine} 
